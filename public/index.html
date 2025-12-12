@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mood → Movement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <h1>Mood → Movement</h1>
+        <p>
+          Pick how you're feeling and get a quick movement suggestion plus a
+          mindset boost.
+        </p>
+      </header>
+
+      <main class="app-main">
+        <section class="section">
+          <h2 class="section-title">1. How are you feeling?</h2>
+          <div class="mood-grid">
+            <button class="mood-btn" data-mood="stressed">Stressed</button>
+            <button class="mood-btn" data-mood="anxious">Anxious</button>
+            <button class="mood-btn" data-mood="sad">Low / Sad</button>
+            <button class="mood-btn" data-mood="unmotivated">Unmotivated</button>
+            <button class="mood-btn" data-mood="energetic">Energetic</button>
+            <button class="mood-btn" data-mood="happy">Happy</button>
+          </div>
+        </section>
+
+        <section class="section actions">
+          <button id="recommendBtn" class="primary-btn" disabled>
+            Get Recommendation
+          </button>
+          <p id="status" class="status-message"></p>
+        </section>
+
+        <section id="result" class="section result hidden">
+          <div class="cards">
+            <article class="card exercise-card">
+              <h2 class="card-title">Suggested Exercise</h2>
+              <p class="exercise-name placeholder">Pick a mood to start.</p>
+              <p class="exercise-meta"></p>
+              <p class="exercise-equipments"></p>
+              <p class="exercise-instructions"></p>
+            </article>
+
+            <article class="card quote-card">
+              <h2 class="card-title">Mindset Boost</h2>
+              <p class="quote-text placeholder">
+                We'll pair your movement with a quote.
+              </p>
+              <p class="quote-author"></p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <p>
+          Exercise data from
+          <a href="https://api-ninjas.com/api/exercises" target="_blank"
+            >API Ninjas</a
+          >.
+        </p>
+        <p>
+          Inspirational quotes provided by
+          <a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a>.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
